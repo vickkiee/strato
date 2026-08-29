@@ -1,0 +1,211 @@
+/* --- Global Variables & Reset --- */
+:root {
+    --bg-primary: #f8fafc;
+    --bg-surface: #ffffff;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --brand-accent: #2563eb;
+    --brand-hover: #1d4ed8;
+    --dark-section: #0f172a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Typography & Global Layout --- */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Constrain the width of the content inside sections */
+section > *, footer > * {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section, footer {
+    padding: 5rem 1.5rem;
+}
+
+/* --- Hero Section --- */
+.hero {
+    background: linear-gradient(135deg, var(--dark-section) 0%, #1e1b4b 100%);
+    color: #ffffff;
+    padding: 8rem 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    letter-spacing: -0.02em;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #cbd5e1;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+/* --- Buttons --- */
+.btn {
+    display: inline-block;
+    padding: 0.875rem 1.75rem;
+    background-color: var(--brand-accent);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+}
+
+.btn:hover {
+    background-color: var(--brand-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px -1px rgba(37, 99, 235, 0.3);
+}
+
+/* --- About Section --- */
+#about {
+    background-color: var(--bg-surface);
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+}
+
+#about p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+}
+
+/* --- Projects Section --- */
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projects h2 {
+    font-size: 2.25rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    width: 100%;
+}
+
+.project {
+    background: var(--bg-surface);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 2rem;
+    border-left: 5px solid var(--brand-accent);
+    transition: transform 0.2s ease;
+}
+
+.project:hover {
+    transform: translateY(-4px);
+}
+
+.project h3 {
+    color: var(--brand-accent);
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.project h4 {
+    color: var(--text-main);
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+.project p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+
+.project ul {
+    margin-left: 1.5rem;
+    color: var(--text-muted);
+}
+
+.project li {
+    margin-bottom: 0.5rem;
+}
+
+/* --- Footer / Contact Section --- */
+#contact {
+    background-color: var(--dark-section);
+    color: #ffffff;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+}
+
+#contact p {
+    color: #cbd5e1;
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+}
+
+#contact p:last-child {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-top: 4rem;
+    margin-bottom: 0;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+    
+    .hero p {
+        font-size: 1.125rem;
+    }
+    
+    section, footer {
+        padding: 4rem 1.25rem;
+    }
+    
+    .project {
+        padding: 1.75rem;
+    }
+    
+    .project h3 {
+        font-size: 1.5rem;
+    }
+}
